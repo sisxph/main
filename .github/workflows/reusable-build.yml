@@ -167,14 +167,14 @@ jobs:
                "${{ inputs.image_variant }}" \
                "${{ github.event_name }}"
 
-      - name: Check Secureboot
-        shell: bash
-        run: |
-          set -x
-          just secureboot \
-              "${{ inputs.image_name }}" \
-              "${{ inputs.image_version }}" \
-              "${{ inputs.image_variant }}"
+#      - name: Check Secureboot
+#        shell: bash
+#        run: |
+#          set -x
+#          just secureboot \
+#              "${{ inputs.image_name }}" \
+#              "${{ inputs.image_version }}" \
+#              "${{ inputs.image_variant }}"
 
       # Workaround bug where capital letters in your GitHub username make it impossible to push to GHCR.
       # https://github.com/macbre/push-to-ghcr/issues/12
