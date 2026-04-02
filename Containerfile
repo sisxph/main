@@ -14,7 +14,7 @@ COPY /sys_files /sys_files
 COPY /build_files /
 COPY packages.json /
 
-FROM ${IMAGE_REGISTRY}/akmods:main-${FEDORA_MAJOR_VERSION}${AKMODS_DIGEST:+@${AKMODS_DIGEST}} AS akmods
+FROM ghcr.io/sisxph/akmods:main-${FEDORA_MAJOR_VERSION}${AKMODS_DIGEST:+@${AKMODS_DIGEST}} AS akmods
 
 FROM ${IMAGE_REGISTRY}/akmods-nvidia-open:main-${FEDORA_MAJOR_VERSION}${AKMODS_NVIDIA_DIGEST:+@${AKMODS_NVIDIA_DIGEST}} AS akmods_nvidia
 
